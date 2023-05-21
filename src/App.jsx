@@ -3,6 +3,7 @@ import Footer from "./components/Footer";
 import Recommended from "./components/Recommended";
 import Banner from "./components/shared/Banner";
 import Banner2 from "./components/shared/Banner2";
+import Design from "./components/shared/Design";
 import FullDescription from "./components/shared/FullDescription";
 import Navbar from "./components/shared/Navigation";
 import NewerPost from "./components/shared/NewerPost";
@@ -26,6 +27,7 @@ function App() {
       <FullDescription />
       <SharePost />
       <NewerPost />
+      <Design />
       </div>
     </div>
   )

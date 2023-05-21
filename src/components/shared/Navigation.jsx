@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
 import logo from '../../images/logo.png';
 import { CiSearch } from 'react-icons/ci';
+import {GiArchiveRegister} from 'react-icons/gi'
+import { RiLoginCircleFill} from 'react-icons/ri'
+import { ImHome3} from 'react-icons/im';
 import '../../style.css'
 
 const Navbar = () => {
@@ -25,13 +28,17 @@ const Navbar = () => {
               <ul className="ml-4 flex space-x-4">
                 <li>
                   <a href="/" className=" text-xl font-medium hover:text-red-900 text-white">Home</a>
+                  {/* <ImHome3 className='text-white text-3xl'/> */}
                 </li>
                 <li>
                   <a href="/about" className="text-white text-xl font-medium hover:text-red-900">About</a>
+                  {/* <GiArchiveRegister className='text-white text-3xl' /> */}
                 </li>
                 <li>
                   <a href="/contact" className="text-white text-xl font-medium hover:text-red-900">Contact</a>
+                  {/* <RiLoginCircleFill className='text-white text-3xl'/> */}
                 </li>
+                
                 <li className='bg-gray-500 px-5 py-1 rounded-lg '>
                   <p className=" text-xl font-medium hover:text-red-900 flex"><CiSearch  className='mt-1 text-white'/><input className='ml-5 w-20  outline-none bg-gray-500 text-white' placeholder='Search' />
                     </p>
