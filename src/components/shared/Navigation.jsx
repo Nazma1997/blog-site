@@ -32,8 +32,8 @@ const Navbar = () => {
                 <li>
                   <a href="/contact" className="text-white text-xl font-medium hover:text-red-900">Contact</a>
                 </li>
-                <li className='bg-gray-800 px-5 py-1 rounded-lg '>
-                  <p className=" text-xl font-medium hover:text-red-900 flex"><CiSearch  className='mt-1 text-white'/><input className='ml-5 w-20  outline-none bg-gray-800 text-white' placeholder='Search' />
+                <li className='bg-gray-500 px-5 py-1 rounded-lg '>
+                  <p className=" text-xl font-medium hover:text-red-900 flex"><CiSearch  className='mt-1 text-white'/><input className='ml-5 w-20  outline-none bg-gray-500 text-white' placeholder='Search' />
                     </p>
                 </li>
                 
