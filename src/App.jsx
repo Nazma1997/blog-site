@@ -2,6 +2,8 @@ import Author from "./components/Author";
 import Footer from "./components/Footer";
 import Recommended from "./components/Recommended";
 import Banner from "./components/shared/Banner";
+import Banner2 from "./components/shared/Banner2";
+import FullDescription from "./components/shared/FullDescription";
 import Navbar from "./components/shared/Navigation";
 import Stories from "./components/shared/Stories";
 
@@ -18,7 +20,8 @@ function App() {
         <Author />
         <Recommended/>
         <Footer />
-      
+      <Banner2 />
+      <FullDescription />
       </div>
     </div>
   )
