@@ -6,14 +6,15 @@ import Card from './shared/Card';
 const Author = () => {
   return (
    <div className='pb-10'>
-     <div className='flex justify-between pb-10'>
+     <div className=' lg:flex md:flex justify-between pb-10'>
        <h1 className='text-white  text-4xl py-5'>See what we’ve <strong>written lately</strong></h1>
        <div className=' mt-5'>
          <div className='flex'>
-         <img src={logo}  className="  w-3/6 rounded-full author"/>
-         <img src={logo}  className="  w-3/6 rounded-full author -ml-10 	"/>
-         <img src={logo}  className="  w-3/6 rounded-full author -ml-10"/>
-         <img src={logo}  className="  w-3/6 rounded-full author -ml-10"/>
+         
+         <img className=' text-xl author border-8 border-gray-700 rounded-full ' src={logo} alt='the logo'/>
+         <img src={logo}  className="  text-xl author border-8 border-gray-700 rounded-full -ml-8 	"/>
+         <img src={logo}  className="  text-xl author border-8 border-gray-700 rounded-full -ml-8"/>
+         <img src={logo}  className="  text-xl author border-8 border-gray-700 rounded-full -ml-8"/>
          </div>
          <p className='text-gray-500  text-bold lg:ml-8 '>Meet Our Top Authors</p>
        </div>

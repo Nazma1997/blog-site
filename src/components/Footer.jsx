@@ -7,11 +7,12 @@ const Footer = () => {
   return (
     <div>
       <div className='lg:flex justify-evenly mt-10 pb-10'>
-      <div className='w-4/12'>
+      <div className='lg:w-4/12'>
         <img src={logo} className='logo'/>
         <p className='text-white text-2xl '>A minimal, functional theme for running a paid-membership publication on Ghost.</p>
       </div>
-      <div className=''>
+     <div className='md:flex'>
+     <div className=''>
           <div className='flex'>
           <div>
             <p className='text-white text-xl '> Social</p>
@@ -99,6 +100,7 @@ const Footer = () => {
           </div>
 
       </div>
+     </div>
     </div>
 
     <p className='text-white text-center pb-10'>© Nazma 2023. All are reserved.</p>

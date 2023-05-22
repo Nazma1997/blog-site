@@ -8,6 +8,21 @@ import '../../style.css'
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [isHovered, setIsHovered] = useState(false);
+  const [selectedItem, setSelectedItem] = useState(null);
+
+  const handleMouseEnter = () => {
+    setIsHovered(true);
+  };
+
+  const handleMouseLeave = () => {
+    setIsHovered(false);
+  };
+
+  const handleItemClick = (item) => {
+    setSelectedItem(item);
+    setIsHovered(false); // Close the dropdown after selecting an item
+  };
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -30,24 +45,56 @@ const Navbar = () => {
                   <a href="/" className=" text-xl font-medium hover:text-red-900 text-white">Home</a>
                   {/* <ImHome3 className='text-white text-3xl'/> */}
                 </li>
-                <li>
-                  <a href="/about" className="text-white text-xl font-medium hover:text-red-900">About</a>
-                  {/* <GiArchiveRegister className='text-white text-3xl' /> */}
+               <li>
+                  <a href="/" className=" text-xl font-medium hover:text-red-900 text-white">Join</a>
+                  {/* <ImHome3 className='text-white text-3xl'/> */}
                 </li>
-                <li>
-                  <a href="/contact" className="text-white text-xl font-medium hover:text-red-900">Contact</a>
-                  {/* <RiLoginCircleFill className='text-white text-3xl'/> */}
-                </li>
+               
+               
                 
-                <li className='bg-gray-500 px-5 py-1 rounded-lg '>
+                {/* <li className='bg-gray-500 px-5 py-1 rounded-lg '>
                   <p className=" text-xl font-medium hover:text-red-900 flex"><CiSearch  className='mt-1 text-white'/><input className='ml-5 w-20  outline-none bg-gray-500 text-white' placeholder='Search' />
                     </p>
+                </li> */}
+
+                <li>
+                <div className="relative" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+      {/* Item that triggers the dropdown */}
+      <button className="hover:bg-gray-200 px-4 py-2 rounded-md">Hover Me</button>
+
+      {/* Dropdown content */}
+      {isHovered && (
+        <div className="absolute bg-white mt-2 py-2 w-48 rounded-md shadow-lg">
+          <a
+            href="#"
+            className={`block px-4 py-2 ${selectedItem === 'Option 1' ? 'bg-gray-100' : 'hover:bg-gray-100'}`}
+            onClick={() => handleItemClick('Option 1')}
+          >
+            Option 1
+          </a>
+          <a
+            href="#"
+            className={`block px-4 py-2 ${selectedItem === 'Option 2' ? 'bg-gray-100' : 'hover:bg-gray-100'}`}
+            onClick={() => handleItemClick('Option 2')}
+          >
+            Option 2
+          </a>
+          <a
+            href="#"
+            className={`block px-4 py-2 ${selectedItem === 'Option 3' ? 'bg-gray-100' : 'hover:bg-gray-100'}`}
+            onClick={() => handleItemClick('Option 3')}
+          >
+            Option 3
+          </a>
+        </div>
+      )}
+    </div>
                 </li>
                 
               </ul>
             </div>
             <div className="md:hidden ">
-              <button onClick={toggleMenu} className="text-white font-medium  focus:outline-none">
+              <button onClick={toggleMenu} className="text-white font-medium  focus:outline-none ml-52">
                 {isOpen ? (
                   <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
@@ -63,20 +110,15 @@ const Navbar = () => {
         </div>
       </div>
       {isOpen && (
-        <div className="md:hidden ml-56  ">
+        <div className="md:hidden  ml-52 ">
           <ul className="px-2  pb-3 space-y-1 sm:px-3">
             <li>
               <a href="/" className="block text-white font-medium hover:text-red-900">Home</a>
             </li>
-            <li>
-              <a href="/about" className="block text-white font-medium hover:text-red-900">About</a>
-            </li>
-            <li>
-              <a href="/contact" className="block text-white font-medium hover:text-red-900">Contact</a>
-            </li>
-            <li className=' bg-gray-800 py-1 rounded-lg w-24 '>
-                  <p className=" text-xl font-medium hover:text-red-900 flex"><CiSearch  className='mt-1 ml-1 text-white'/><input className='ml-1 w-16  outline-none bg-gray-800' placeholder='Search' />
-                    </p>
+           
+                <li>
+                  <a href="/" className=" text-xl font-medium hover:text-red-900 text-white">Join</a>
+                  {/* <ImHome3 className='text-white text-3xl'/> */}
                 </li>
           </ul>
         </div>

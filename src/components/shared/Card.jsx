@@ -9,9 +9,9 @@ const Card = () => {
       <img src={logo} alt='the author' className="-mt-16 ml-8  w-1/6 rounded-full" />
       <div className="px-4  mt-8">
         <div className='flex'>
-        <p className='bg-gray-800 text-white w-4/12 rounded-2xl text-center py-1 text-bold mb-2'>Design</p>
-        <p className='bg-gray-800 text-white w-4/12 rounded-2xl text-center py-1 text-bold mb-2 mx-1'>Technology</p>
-        <p className='bg-gray-800 text-white w-4/12 rounded-2xl text-center py-1 text-bold mb-2'>Product</p>
+        <p className='bg-gray-500 text-white w-4/12 rounded-2xl text-center py-1 text-bold mb-2'>Design</p>
+        <p className='bg-gray-500 text-white w-4/12 rounded-2xl text-center py-1 text-bold mb-2 mx-1'>Technology</p>
+        <p className='bg-gray-500 text-white w-4/12 rounded-2xl text-center py-1 text-bold mb-2'>Product</p>
         </div>
         <h3 className="text-xl text-white  font-bold mb-2"> Title</h3>
         <h3 className="text-white font-normal text-xl ">Short Description</h3>

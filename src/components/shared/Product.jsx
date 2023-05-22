@@ -10,7 +10,7 @@ const Product = () => {
      
      </div>
     <div className='flex justify-center'>
-    <h1 className=' text-6xl  font-bold'>Product </h1>
+    <h1 className='lg:text-6xl md:text-5xl text-2xl    font-bold'>Product </h1>
      
      <h1  className='ml-8 bg-slate-500 flex justify-center items-center rounded-full font-bold'  style={{height:'30px', width:'30px'}}>6</h1>
      
