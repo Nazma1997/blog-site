@@ -7,6 +7,7 @@ import Design from "./components/shared/Design";
 import FullDescription from "./components/shared/FullDescription";
 import Navbar from "./components/shared/Navigation";
 import NewerPost from "./components/shared/NewerPost";
+import Product from "./components/shared/Product";
 import SharePost from "./components/shared/SharePost";
 import Stories from "./components/shared/Stories";
 import Technology from "./components/shared/Technology";
@@ -30,6 +31,7 @@ function App() {
       <NewerPost />
       <Design />
       <Technology />
+      <Product />
       
       </div>
     </div>
