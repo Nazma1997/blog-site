@@ -9,6 +9,7 @@ import Navbar from "./components/shared/Navigation";
 import NewerPost from "./components/shared/NewerPost";
 import SharePost from "./components/shared/SharePost";
 import Stories from "./components/shared/Stories";
+import Technology from "./components/shared/Technology";
 
 
 function App() {
@@ -28,6 +29,8 @@ function App() {
       <SharePost />
       <NewerPost />
       <Design />
+      <Technology />
+      
       </div>
     </div>
   )
