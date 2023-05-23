@@ -34,6 +34,7 @@ function App() {
           <Route path='/design' element={<Design />} />
           <Route path='/technology' element={<Technology />} />
           <Route path='/product' element={<Product />} />
+          <Route path='/add-post' element={<AddPost />} />
          </Routes>
        </BrowserRouter>
       {/* <Banner2 />

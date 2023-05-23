@@ -1,7 +1,10 @@
 import React from 'react'
+import Navbar from './Navigation'
 
 const AddPost = () => {
   return (
+   <>
+    <Navbar />
     <div className="min-h-screen  lg:flex items-center justify-center ">
     <form className="w-full p-6 lg:mx-32  rounded shadow-2xl">
       <h2 className="text-2xl mb-4">Add a post</h2>
@@ -26,6 +29,7 @@ const AddPost = () => {
       </div>
     </form>
   </div>
+   </>
   )
 }
 

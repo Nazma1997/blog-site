@@ -62,20 +62,24 @@ const Navbar = () => {
 
                       {isHovered && (
                         <div className="absolute bg-slate-800 mt-2 py-2 w-48 rounded-md shadow-2xl">
-                          <a
+                          <Link
                             href="#"
                             className={`block px-4 py-2 ${selectedItem === 'Option 1' ? 'bg-slate-800' : 'hover:bg-slate-700'}`}
                             onClick={() => handleItemClick('Option 1')}
                           >
                             Profile
-                          </a>
-                          <a
-                            href="#"
+                          </Link>
+                          <li>
+                      <Link to="/add-post"  className={`block px-4 py-2 ${selectedItem === 'Option 1' ? 'bg-slate-800' : 'hover:bg-slate-700'}`}>Create Post</Link>
+
+                    </li>
+                          <Link
+                            to="#"
                             className={`block px-4 py-2 ${selectedItem === 'Option 2' ? 'bg-slate-800' : 'hover:bg-slate-700'}`}
                             onClick={() => handleItemClick('Option 2')}
                           >
                             Logout
-                          </a>
+                          </Link>
 
                         </div>
                       )}
@@ -116,6 +120,10 @@ const Navbar = () => {
                   <>
                     <li>
                       <Link to="/register" className=" text-xl font-medium  text-white">Profile</Link>
+
+                    </li>
+                    <li>
+                      <Link to="/add-post" className=" text-xl font-medium  text-white">Create Post</Link>
 
                     </li>
                     <li>
