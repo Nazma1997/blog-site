@@ -5,6 +5,7 @@ import {GiArchiveRegister} from 'react-icons/gi'
 import { RiLoginCircleFill} from 'react-icons/ri'
 import { ImHome3} from 'react-icons/im';
 import '../../style.css'
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -35,18 +36,18 @@ const Navbar = () => {
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
             <div className="flex-shrink-0">
-              <img src={logo} alt='The logo' className='logo'/>
+              <Link to='/'><img src={logo} alt='The logo' className='logo'/></Link>
             </div>
           </div>
           <div className="flex items-center">
             <div className="hidden md:block">
               <ul className="ml-4 flex space-x-4">
                 <li>
-                  <a href="/" className=" text-xl font-medium hover:text-red-900 text-white">Home</a>
+                  <Link to="/" className=" text-xl font-medium text-white">Home</Link>
                   {/* <ImHome3 className='text-white text-3xl'/> */}
                 </li>
                <li>
-                  <a href="/" className=" text-xl font-medium hover:text-red-900 text-white">Join</a>
+                  <Link to="/register" className=" text-xl font-medium  text-white">Join</Link>
                   {/* <ImHome3 className='text-white text-3xl'/> */}
                 </li>
                
@@ -112,13 +113,13 @@ const Navbar = () => {
       {isOpen && (
         <div className="md:hidden  ml-52 ">
           <ul className="px-2  pb-3 space-y-1 sm:px-3">
-            <li>
-              <a href="/" className="block text-white font-medium hover:text-red-900">Home</a>
-            </li>
-           
-                <li>
-                  <a href="/" className=" text-xl font-medium hover:text-red-900 text-white">Join</a>
-                  {/* <ImHome3 className='text-white text-3xl'/> */}
+          <li>
+                  <Link to="/" className=" text-xl font-medium text-white">Home</Link>
+                  
+                </li>
+               <li>
+                  <Link to="/register" className=" text-xl font-medium  text-white">Join</Link>
+                  
                 </li>
           </ul>
         </div>

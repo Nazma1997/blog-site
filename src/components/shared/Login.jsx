@@ -2,11 +2,15 @@ import React from 'react';
 import register from '../../images/register.png';
 import logo from '../../images/logo.png';
 import '../../style.css';
+import { Link } from 'react-router-dom';
+import Navbar from './Navigation';
 
 const Login = () => {
   return (
-    <div className='lg:flex md:flex justify-between'>
-       <img src={register} alt='the register' className='lg:w-6/12 md:w-5/12 w-full  	' />
+    <div>
+      <Navbar />
+      <div className='lg:flex md:flex justify-between'>
+       <img src={register} alt='the register' className='lg:w-6/12 md:w-5/12 w-full  	h-screen' />
        <div className='flex justify-center  lg:mr-96 md:mr-10 items-center lg:-mt-5 '>
       <div>
       <img className=' text-xl logo border-8 border-gray-700 rounded-full my-10 ' src={logo} alt='the logo'/>
@@ -26,10 +30,13 @@ const Login = () => {
       <div className="flex justify-start">
         <button className="px-4 py-2 bg-blue-500 text-xl rounded hover:bg-blue-600" >Login</button>
       </div>
+
+      <p className='my-10'>Are you create an account? <Link to='/register'><span className='hover:underline'>Register</span></Link></p>
     </form>
-<p>Are you create an account? <span className='hover:underline'>Register</span></p>
+
       </div>
        </div>
+    </div>
     </div>
   )
 }
