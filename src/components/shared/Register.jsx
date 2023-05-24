@@ -9,14 +9,13 @@ import axios from 'axios';
 
 const Register = () => {
 
-  const [createUser] = useCreateUserMutation();
-  
-  const navigate = useNavigate()
-
+  const [createUser, { error }] = useCreateUserMutation();  
+  const navigate = useNavigate();
   const [name, setName] =useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [image, setImage] = useState('')
+  const [image, setImage] = useState('');
+ 
 
   const apiKey = '837d05f4d0c9787e5980a5a7fe323afd'
 
@@ -66,7 +65,6 @@ const Register = () => {
   }
 
 
-
   return (
     <div>
       <Navbar />
@@ -87,6 +85,7 @@ const Register = () => {
       <div className="mb-4">
         <label className="block mb-2" >User Email :</label>
         <input className="w-full px-4 py-2 border-0 rounded-md focus:outline-none focus:border-blue-500 bg-gray-500" type="email" id="username" name="username" placeholder="Enter your email"  onChange={e => setEmail(e.target.value)}/>
+        <p className='text-white'>{error}</p>
       </div>
       <div className="mb-4">
         <label className="block mb-2" >User Image :</label>

@@ -27,11 +27,23 @@ export const serverApi = createApi({
       }),
       invalidatesTags: ['User']
     }),
+    createPost: builder.mutation({
+      query: (data) => ({
+        url: `/api/v1/post`,
+        method: 'POST',
+        body: data
+      }),
+      invalidatesTags: ['User']
+    }),
+    getPost: builder.query({
+      query: () => `/api/v1/post`,
+      providesTags: ['User'],
+    }),
   }),
 })
 // })
 
 
-export const {useGetUserQuery, useCreateUserMutation , useLoginUserMutation} = serverApi
+export const {useGetUserQuery, useGetPostQuery, useCreateUserMutation , useLoginUserMutation, useCreatePostMutation} = serverApi
 
 

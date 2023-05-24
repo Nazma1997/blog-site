@@ -17,6 +17,7 @@ import SharePost from "./components/shared/SharePost";
 import Stories from "./components/shared/Stories";
 import Technology from "./components/shared/Technology";
 import Home from "./components/Home";
+import Profile from "./components/Profile";
 
 
 function App() {
@@ -35,6 +36,7 @@ function App() {
           <Route path='/technology' element={<Technology />} />
           <Route path='/product' element={<Product />} />
           <Route path='/add-post' element={<AddPost />} />
+          <Route path='/profile' element={<Profile />} />
          </Routes>
        </BrowserRouter>
       {/* <Banner2 />
