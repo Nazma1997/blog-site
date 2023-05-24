@@ -28,7 +28,7 @@ const Navbar = () => {
   };
 
   return (
-    <div className="p-5">
+    <div className=" p-5">
       <nav >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
@@ -63,7 +63,7 @@ const Navbar = () => {
                       {isHovered && (
                         <div className="absolute bg-slate-800 mt-2 py-2 w-48 rounded-md shadow-2xl">
                           <Link
-                            href="#"
+                           to='/profile'
                             className={`block px-4 py-2 ${selectedItem === 'Option 1' ? 'bg-slate-800' : 'hover:bg-slate-700'}`}
                             onClick={() => handleItemClick('Option 1')}
                           >
@@ -106,7 +106,7 @@ const Navbar = () => {
         </div>
         {isOpen && (
           <div className="md:hidden  ml-52 ">
-            <ul className="px-2  pb-3 space-y-1 sm:px-3">
+            <ul className="px-2  pb-10 space-y-1 sm:px-3">
               <li>
                 <Link to="/" className=" text-xl font-medium text-white">Home</Link>
 
@@ -119,7 +119,7 @@ const Navbar = () => {
                 user && (
                   <>
                     <li>
-                      <Link to="/register" className=" text-xl font-medium  text-white">Profile</Link>
+                      <Link to="/profile" className=" text-xl font-medium  text-white">Profile</Link>
 
                     </li>
                     <li>

@@ -7,7 +7,7 @@ const Stories = () => {
   const { data: posts } = useGetPostQuery();
 
 
-  console.log('post', posts)
+ 
   return (
     <div>
       <h1 className='text-white  text-4xl py-5'>Get started with our <strong>best stories</strong></h1>
