@@ -8,7 +8,7 @@ const Navbar = () => {
   const [isHovered, setIsHovered] = useState(false);
   const [selectedItem, setSelectedItem] = useState(null);
 
-  const user = localStorage.getItem('user');
+  const user = localStorage.getItem('email');
 
   const handleMouseEnter = () => {
     setIsHovered(true);

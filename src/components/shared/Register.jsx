@@ -62,7 +62,7 @@ const Register = () => {
     setEmail('');
     setImage('');
     setPassword('');
-    navigate('/')
+    navigate('/login')
   }
 
 

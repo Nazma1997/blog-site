@@ -25,8 +25,12 @@ const Login = () => {
     loginUser(data)
     setEmail('');
     setPassword('');
-    
+    localStorage.setItem('email', email);
+    if(email && password){
+      navigate('/')
+    }
   }
+   
 
   return (
     <div>
