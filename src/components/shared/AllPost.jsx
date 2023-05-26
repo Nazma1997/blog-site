@@ -26,6 +26,30 @@ const AllPost = () => {
     }
   };
 
+  // Pagination
+  const itemsPerPage = 12;
+  const [currentPage, setCurrentPage] = useState(1);
+
+
+  const totalItems = posts?.length;
+  const totalPages = Math.ceil(totalItems / itemsPerPage);
+
+  // Function to handle page change
+  const handlePageChange = (page) => {
+    setCurrentPage(page);
+  };
+
+  const handlePreviousPage = () => {
+    setCurrentPage((prevPage) => prevPage - 1);
+  };
+
+  const handleNextPage = () => {
+    setCurrentPage((prevPage) => prevPage + 1);
+  };
+
+  const startIndex = (currentPage - 1) * itemsPerPage;
+  const endIndex = startIndex + itemsPerPage;
+  const displayedItems = posts?.slice(startIndex, endIndex);
 
   return (
     <>
@@ -41,7 +65,7 @@ const AllPost = () => {
           className='bg-slate-800 lg:w-6/12 w-8/12 text-2xl h-20 text-center text-white rounded-2xl mt-16 hover:outline-none border-0 shadow-2xl'
         />
       </div>
-      <div>
+      <div className='pb-10'>
         <h1 className='text-white  text-4xl py-5'>Get started with our <strong>All Posts</strong></h1>
 
         <div className="grid lg:grid-cols-4 md:grid-cols-2 gap-4">
@@ -49,15 +73,49 @@ const AllPost = () => {
 
           {searchTerm === ''
 
-            ? posts?.map(item =>
+            ? displayedItems?.map(item =>
               <Card item={item} key={item._id} />
             )
             : searchResults.map((item) => (
               <Card item={item} key={item._id} />
             ))}
         </div>
-        <hr />
+
       </div>
+
+
+      <div className='flex justify-center mb-10'>
+        <button
+          disabled={currentPage === 1}
+          onClick={handlePreviousPage}
+          className='bg-slate-800 text-white px-10 py-3 rounded-2xl shadow-lg text-xl font-bold'
+        >
+          Previous
+        </button>
+
+        {Array.from({ length: totalPages }, (_, index) => (
+          <button
+            key={index + 1}
+            onClick={() => handlePageChange(index + 1)}
+            className={currentPage === index + 1 ? 'active' : ''}
+            className='text-2xl mx-5 text-white font-bold'
+            
+          >
+            {index + 1}
+          </button>
+        ))}
+
+        <button
+          disabled={currentPage === totalPages}
+          onClick={handleNextPage}
+          className='bg-slate-800 text-white px-10 py-3 rounded-2xl shadow-lg text-xl font-bold'
+        >
+          Next
+        </button>
+      </div>
+      <hr />
+
+
       <Footer />
     </>
   )
