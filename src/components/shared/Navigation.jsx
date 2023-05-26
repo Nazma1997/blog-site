@@ -23,7 +23,7 @@ const Navbar = () => {
 
   const handleItemClick = (item) => {
     setSelectedItem(item);
-    setIsHovered(false); // Close the dropdown after selecting an item
+    setIsHovered(false);
   };
 
   const toggleMenu = () => {
@@ -31,7 +31,7 @@ const Navbar = () => {
   };
 
   return (
-    <div className=" p-5">
+    <div className=" p-8">
       <nav >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
@@ -45,11 +45,11 @@ const Navbar = () => {
                 <ul className="ml-4 flex space-x-4">
                   <li>
                     <Link to="/" className=" text-xl font-medium text-white">Home</Link>
-                    {/* <ImHome3 className='text-white text-3xl'/> */}
+                    
                   </li>
                   <li>
                     <Link to="/register" className=" text-xl font-medium  text-white">Join</Link>
-                    {/* <ImHome3 className='text-white text-3xl'/> */}
+                   
                   </li>
 
 
