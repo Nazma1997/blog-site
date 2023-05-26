@@ -39,11 +39,15 @@ export const serverApi = createApi({
       query: () => `/api/v1/post`,
       providesTags: ['User'],
     }),
+    getSingleItem: builder.query({
+      query: (id) => `/api/v1/post/${id}`,
+      providesTags: ['User'],
+    }),
   }),
 })
 // })
 
 
-export const {useGetUserQuery, useGetPostQuery, useCreateUserMutation , useLoginUserMutation, useCreatePostMutation} = serverApi
+export const {useGetUserQuery, useGetPostQuery, useCreateUserMutation , useLoginUserMutation, useCreatePostMutation, useGetSingleItemQuery} = serverApi
 
 

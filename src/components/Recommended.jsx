@@ -11,7 +11,7 @@ const Recommended = () => {
      
     <div className="grid lg:grid-cols-4 md:grid-cols-2 gap-4">
          {
-          posts?.map(item =>
+          posts?.slice(10,14)?.map(item =>
              <Card  item={item} key={item._id}/>
             )
          }

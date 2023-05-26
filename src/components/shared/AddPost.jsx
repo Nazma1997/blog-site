@@ -3,6 +3,7 @@ import Navbar from './Navigation'
 import { useCreatePostMutation } from '../../redux/apiSlice/userSlice';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
+import Footer from '../Footer';
 
 const AddPost = () => {
 
@@ -85,6 +86,8 @@ const AddPost = () => {
       </div>
     </form>
   </div>
+  <hr />
+  <Footer />
    </>
   )
 }

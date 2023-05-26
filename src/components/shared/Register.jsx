@@ -6,6 +6,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import Navbar from './Navigation';
 import { useCreateUserMutation } from '../../redux/apiSlice/userSlice';
 import axios from 'axios';
+import Footer from '../Footer';
 
 const Register = () => {
 
@@ -105,6 +106,9 @@ const Register = () => {
      
        </div>
     </div>
+    <hr />
+
+    <Footer />
     </div>
   )
 }

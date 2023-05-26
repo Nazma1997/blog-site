@@ -5,6 +5,7 @@ import '../../style.css';
 import { Link, useNavigate } from 'react-router-dom';
 import Navbar from './Navigation';
 import { useLoginUserMutation } from '../../redux/apiSlice/userSlice';
+import Footer from '../Footer';
 
 const Login = () => {
   const navigate = useNavigate();
@@ -26,11 +27,11 @@ const Login = () => {
     setEmail('');
     setPassword('');
     localStorage.setItem('email', email);
-    if(email && password){
+    if (email && password) {
       navigate('/')
     }
   }
-   
+
 
   return (
     <div>
@@ -46,12 +47,12 @@ const Login = () => {
 
               <div className="mb-4">
                 <label className="block mb-2" >User Email :</label>
-                <input className="w-full px-4 py-2 border-0 rounded-md focus:outline-none focus:border-blue-500 bg-gray-500" type="email" id="username" name="username" placeholder="Enter your email" onChange={e => setEmail(e.target.value)}/>
+                <input className="w-full px-4 py-2 border-0 rounded-md focus:outline-none focus:border-blue-500 bg-gray-500" type="email" id="username" name="username" placeholder="Enter your email" onChange={e => setEmail(e.target.value)} />
               </div>
 
               <div className="mb-4">
                 <label className="block mb-2" >Password :</label>
-                <input className="w-full px-4 py-2 border-0 rounded-md focus:outline-none focus:border-blue-500 bg-gray-500" type="password" id="password" name="password" placeholder="Enter your password" onChange={e => setPassword(e.target.value)}/>
+                <input className="w-full px-4 py-2 border-0 rounded-md focus:outline-none focus:border-blue-500 bg-gray-500" type="password" id="password" name="password" placeholder="Enter your password" onChange={e => setPassword(e.target.value)} />
               </div>
               <div className="flex justify-start">
                 <button className="px-4 py-2 bg-blue-500 text-xl rounded hover:bg-blue-600" type='submit' onClick={submitForm} >Login</button>
@@ -63,6 +64,9 @@ const Login = () => {
           </div>
         </div>
       </div>
+      <hr />
+
+      <Footer />
     </div>
   )
 }

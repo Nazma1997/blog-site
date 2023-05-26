@@ -17,7 +17,7 @@ const Stories = () => {
         </div> */}
       <div className="grid lg:grid-cols-4 md:grid-cols-2 gap-4">
          {
-          posts?.map(item =>
+          posts?.slice(0,4)?.map(item =>
              <Card  item={item} key={item._id}/>
             )
          }

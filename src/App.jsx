@@ -18,6 +18,7 @@ import Stories from "./components/shared/Stories";
 import Technology from "./components/shared/Technology";
 import Home from "./components/Home";
 import Profile from "./components/Profile";
+import Details from "./components/shared/Details";
 
 
 function App() {
@@ -37,18 +38,15 @@ function App() {
           <Route path='/product' element={<Product />} />
           <Route path='/add-post' element={<AddPost />} />
           <Route path='/profile' element={<Profile />} />
+          <Route path = '/details/:id' element={<Details />} />
          </Routes>
        </BrowserRouter>
-      {/* <Banner2 />
-      <FullDescription />
-      <SharePost />
-      <NewerPost />
-      <LatestPost />
+     
 
-      <Register />
+      {/* <Register />
       <Login />
-      <AddPost />
-       */}
+      <AddPost />  */}
+      
       </div>
     </div>
   )

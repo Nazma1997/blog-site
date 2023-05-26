@@ -9,6 +9,9 @@ const Navbar = () => {
   const [selectedItem, setSelectedItem] = useState(null);
 
   const user = localStorage.getItem('email');
+  const logout = () => {
+    localStorage.removeItem('email')
+  };
 
   const handleMouseEnter = () => {
     setIsHovered(true);
@@ -76,7 +79,7 @@ const Navbar = () => {
                           <Link
                             to="#"
                             className={`block px-4 py-2 ${selectedItem === 'Option 2' ? 'bg-slate-800' : 'hover:bg-slate-700'}`}
-                            onClick={() => handleItemClick('Option 2')}
+                            onClick={logout}
                           >
                             Logout
                           </Link>
@@ -127,7 +130,7 @@ const Navbar = () => {
 
                     </li>
                     <li>
-                      <Link to="/register" className=" text-xl font-medium  text-white">Logout</Link>
+                      <Link to="/*" className=" text-xl font-medium  text-white " onClick={logout}>Logout</Link>
 
                     </li>
                   </>

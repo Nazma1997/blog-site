@@ -5,11 +5,12 @@ import { Link } from 'react-router-dom';
 
 const Card = ({item}) => {
 
-  console.log('item', item)
+  // console.log('item', item)
   const author = localStorage.getItem('image');
   return (
-    <div className="	 rounded-lg shadow-2xl overflow-hidden max-w-sm mx-auto animate-rotate pb-16 my-6 ">
-      <img src={item?.image} alt="Card" className="w-full h-5/6 object-cover card bg-white rounded-lg" />
+    < Link to={`/details/${item?._id}`}>
+      <div className="	 rounded-lg shadow-2xl overflow-hidden max-w-sm mx-auto animate-rotate pb-16 my-6 ">
+      <img src={item?.image} alt="Card" className="w-full  object-cover card bg-white rounded-lg" style={{height:'500px'}}/>
       <img src={author} alt='the author' className="-mt-16 ml-8  w-1/6 rounded-full  author2" />
       <div className="px-4  mt-8">
         <div className='flex'>
@@ -22,6 +23,7 @@ const Card = ({item}) => {
        
       </div>
     </div>
+    </Link>
   );
 };
 
