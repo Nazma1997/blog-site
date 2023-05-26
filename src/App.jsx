@@ -24,9 +24,9 @@ import AllPost from "./components/shared/AllPost";
 
 function App() {
 
-
+  // bg-slate-800 text-white 
   return (
-    <div className="  bg-slate-800 text-white 	">
+    <div className=" bg-slate-800 text-white	">
       <div className="lg:mx-24 mx-16">
         
        <BrowserRouter>

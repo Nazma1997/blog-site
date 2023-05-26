@@ -35,7 +35,7 @@ const Banner2 = ({data}) => {
          </div>
       </div>
       <div>
-        <img src={data?.image} alt='the logo' />
+        <img src={data?.image} alt='the logo' className=' rounded-2xl' style={{height:'500px', width:'500px'}} />
       </div>
     </div>
   )
