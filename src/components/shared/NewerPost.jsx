@@ -10,21 +10,21 @@ const NewerPost = () => {
     <div className='pb-10'>
       <hr />
       <div className='lg:flex  justify-between my-5'>
-        <div className='flex mt-5'>
-           <img src={posts?.[posts?.length - 1]?.image} alt='the logo' className=' rounded-2xl' style={{height:'300px', width:'300px'}}/>
-           <div className='lg:mt-20 md:mt-12 mx-5  min-w-fit'>
+        <div className='lg:flex mt-5'>
+           <img src={posts?.[posts?.length - 1]?.image} alt='the logo' className=' rounded-2xl ' style={{height:'300px', width:'300px'}}/>
+           <div className='lg:mt-20 md:mt-12 mx-5 mt-5  min-w-fit'>
             <p>Newer Post</p>
-            <h1 className='text-2xl hover:underline'> Brand is just a perception, and will match reality  </h1>
+            <h1 className='text-2xl hover:underline'> Brand is just a perception, and will <br /> match reality  </h1>
            </div>
         </div>
 
-        <div className='flex mt-5'>
+        <div className='lg:flex mt-5'>
            
            <div className='lg:mt-20 md:mt-12  ml-5'>
             <p>Older Post</p>
-            <h1 className='text-2xl hover:underline'>Brand is just a perception, and will match reality over </h1>
+            <h1 className='text-2xl hover:underline'>Brand is just a perception, and will <br /> match reality over </h1>
            </div>
-           <img src={posts?.[0].image} alt='the logo' className='ml-2 rounded-2xl' style={{height:'300px', width:'300px'}} />
+           <img src={posts?.[0].image} alt='the logo' className='ml-2 rounded-2xl lg:mt-0 mt-5' style={{height:'300px', width:'300px'}} />
         </div>
       </div>
 

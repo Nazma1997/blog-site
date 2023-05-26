@@ -1,6 +1,6 @@
 import {createApi, fetchBaseQuery} from "@reduxjs/toolkit/query/react";
-// const BASE_URL = 'http://localhost:5000';
-const BASE_URL = process.env.REACT_APP_BASE_URL
+const BASE_URL = 'http://localhost:5000';
+// const BASE_URL = 'blog-server-mocha.vercel.app'
 
 
 export const serverApi = createApi({
