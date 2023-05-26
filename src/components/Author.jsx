@@ -3,6 +3,7 @@ import logo from '../images/logo.png';
 import '../style.css';
 import Card from './shared/Card';
 import { useGetPostQuery, useGetUserQuery } from '../redux/apiSlice/userSlice';
+import { Link } from 'react-router-dom';
 
 const Author = () => {
   const { data: posts } = useGetPostQuery();
@@ -34,7 +35,7 @@ const Author = () => {
          }
       </div>
      <div className='flex justify-center'>
-     <p className=' px-5 py-4 rounded-lg text-xl font-semibold text-white  bg-gray-800 mb-5'>See More</p>
+     <Link to='/all-post'><p className=' px-5 py-4 rounded-lg text-xl font-semibold text-white  bg-gray-800 mb-5'>See More</p></Link>
      </div>
     
      <hr />

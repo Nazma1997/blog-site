@@ -19,6 +19,7 @@ import Technology from "./components/shared/Technology";
 import Home from "./components/Home";
 import Profile from "./components/Profile";
 import Details from "./components/shared/Details";
+import AllPost from "./components/shared/AllPost";
 
 
 function App() {
@@ -39,6 +40,7 @@ function App() {
           <Route path='/add-post' element={<AddPost />} />
           <Route path='/profile' element={<Profile />} />
           <Route path = '/details/:id' element={<Details />} />
+          <Route path = '/all-post' element={<AllPost />} />
          </Routes>
        </BrowserRouter>
      
