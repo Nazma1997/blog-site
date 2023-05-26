@@ -6,6 +6,7 @@ import SharePost from './SharePost';
 import NewerPost from './NewerPost';
 import LatestPost from './LatestPosts';
 import Navbar from './Navigation';
+import Footer from '../Footer';
 
 const Product = () => {
   return (
@@ -31,6 +32,7 @@ const Product = () => {
     <NewerPost />
     <LatestPost />
     </div>
+    <Footer />
   </>
   )
 }

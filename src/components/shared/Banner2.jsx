@@ -24,7 +24,7 @@ const Banner2 = ({data}) => {
         <Link to='/product' className='bg-gray-500 text-white w-4/12 rounded-2xl text-center py-1 text-bold mb-2'><p className='hover:underline' >Product</p></Link>
         </div>
         <h3 className="lg:text-5xl text-2xl text-white  font-bold mt-12 mb-5">{data?.title}</h3>
-        <h3 className="text-white font-normal text-xl my-8 ">{data?.shortDescription}</h3>
+        <h3 className="text-white font-normal text-xl my-8 " dangerouslySetInnerHTML={{__html:data?.shortDescription}}></h3>
      
          <div className='flex'>
            <img src={data?.image} className="mt-7 rounded-full  author3" />

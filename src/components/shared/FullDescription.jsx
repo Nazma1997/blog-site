@@ -6,7 +6,7 @@ const FullDescription = ({data}) => {
       {/* <div className='flex justify-center'> */}
      {/* <p className=' px-5 py-4 text-xl font-semibold text-white  bg-gray-800 mb-5'></p> */}
      {/* </div> */}
-     <p className=' '> {data?.fullDescription} </p>
+     <p className="text-white font-normal text-xl hover:underline " dangerouslySetInnerHTML={{__html:data?.shortDescription}}></p>
     </div>
   )
 }

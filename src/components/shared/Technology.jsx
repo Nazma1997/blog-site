@@ -6,6 +6,7 @@ import SharePost from './SharePost';
 import NewerPost from './NewerPost';
 import LatestPost from './LatestPosts';
 import Navbar from './Navigation';
+import Footer from '../Footer';
 
 const Technology = () => {
   return (
@@ -31,6 +32,8 @@ const Technology = () => {
     <NewerPost />
     <LatestPost />
    </div>
+
+   <Footer />
   </>
   )
 }

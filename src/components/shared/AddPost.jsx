@@ -4,6 +4,7 @@ import { useCreatePostMutation } from '../../redux/apiSlice/userSlice';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import Footer from '../Footer';
+import Editor from './Editor';
 
 const AddPost = () => {
 
@@ -58,8 +59,8 @@ const AddPost = () => {
   return (
    <>
     <Navbar />
-    <div className="min-h-screen  lg:flex items-center justify-center ">
-    <form className="w-full p-6 lg:mx-32  rounded shadow-2xl">
+    <div className="min-h-screen  lg:flex items-center justify-center  ">
+    <form className="w-full p-6 lg:mx-32  rounded shadow-2xl pb-10">
       <h2 className="text-2xl mb-4">Add a post</h2>
       <div className="mb-4">
         <label className="block mb-2" >Upload a image</label>
@@ -71,11 +72,13 @@ const AddPost = () => {
       </div>
       <div className="mb-4">
         <label className="block mb-2" >Short Description</label>
-        <input className="w-full px-4 py-2 border rounded-md focus:outline-none focus:border-blue-500 bg-slate-800" type="text" id="password" name="password" placeholder="Short description" onChange={e => setShortDescription(e.target.value)}/>
+        {/* <input className="w-full px-4 py-2 border rounded-md focus:outline-none focus:border-blue-500 bg-slate-800" type="text" id="password" name="password" placeholder="Short description" onChange={e => setShortDescription(e.target.value)}/> */}
+        <Editor setFullDescription={setShortDescription} fullDescription={shortDescription} className="bg-slate-800"/>
       </div>
       <div className="mb-4">
         <label className="block mb-2" >Full Description</label>
-        <input className="w-full px-4 py-2 border rounded-md focus:outline-none focus:border-blue-500 bg-slate-800" type="text" id="password" name="password" placeholder="Full description" onChange={e => setFullDescription(e. target.value)}/>
+        {/* <input className="w-full px-4 py-2 border rounded-md focus:outline-none focus:border-blue-500 bg-slate-800" type="text" id="password" name="password" placeholder="Full description" onChange={e => setFullDescription(e. target.value)}/> */}
+        <Editor setFullDescription={setFullDescription} fullDescription={fullDescription} className="bg-slate-800"/>
       </div>
       <div className="mb-4">
         <label className="block mb-2" >Tag</label>

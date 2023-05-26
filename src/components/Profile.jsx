@@ -2,6 +2,7 @@ import React from 'react'
 import { useGetPostQuery } from '../redux/apiSlice/userSlice';
 import Card from './shared/Card';
 import Navbar from './shared/Navigation';
+import Footer from './Footer';
 
 const Profile = () => {
 
@@ -27,6 +28,7 @@ const Profile = () => {
       </div>
       <hr />
     </div>
+    <Footer />
   </>
   )
 }

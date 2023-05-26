@@ -19,7 +19,7 @@ const Card = ({item}) => {
         <Link to='/product' className='bg-gray-500 text-white w-4/12 rounded-2xl text-center py-1 text-bold mb-2'><p className='hover:underline' >Product</p></Link>
         </div>
         <h3 className="text-xl text-white  font-bold mb-2 hover:underline"> {item?.title}</h3>
-        <h3 className="text-white font-normal text-xl hover:underline ">{item?.shortDescription}</h3>
+        <h3 className="text-white font-normal text-xl hover:underline "  dangerouslySetInnerHTML={{__html:item?.shortDescription}}></h3>
        
       </div>
     </div>
