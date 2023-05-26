@@ -1,5 +1,5 @@
 import {createApi, fetchBaseQuery} from "@reduxjs/toolkit/query/react";
-const BASE_URL = 'blog-server-site.vercel.app';
+const BASE_URL = 'https://blog-server-mocha.vercel.app/';
 
 
 

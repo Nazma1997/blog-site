@@ -1,5 +1,5 @@
 import React from 'react'
-import logo from '../../images/logo.png';
+import logo from '../../images/product.jpg';
 import '../../style.css'
 import FullDescription from './FullDescription';
 import SharePost from './SharePost';
