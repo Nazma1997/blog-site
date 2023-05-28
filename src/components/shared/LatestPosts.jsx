@@ -10,7 +10,7 @@ const LatestPost = () => {
       <h1 className='text-white  text-4xl py-5'>Check out the <strong>latest posts</strong></h1>
       <div className="grid lg:grid-cols-4 md:grid-cols-2 gap-4">
          {
-          posts?.map(item =>
+          posts?.slice(0,11).map(item =>
              <Card  item={item} key={item._id}/>
             )
          }

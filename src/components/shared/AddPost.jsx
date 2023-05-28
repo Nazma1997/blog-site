@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import Navbar from './Navigation'
-import { useCreatePostMutation } from '../../redux/apiSlice/userSlice';
+import { useCreatePostMutation, useGetUserQuery } from '../../redux/apiSlice/userSlice';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import Footer from '../Footer';
@@ -9,6 +9,7 @@ import Editor from './Editor';
 const AddPost = () => {
 
   const [createPost] = useCreatePostMutation();  
+  const {data: authors = []} = useGetUserQuery()
   const navigate = useNavigate();
   const [title, setTitle] = useState('');
   const [shortDescription, setShortDescription] = useState('');
@@ -18,9 +19,13 @@ const AddPost = () => {
   const [image, setImage] = useState('');
   const email = localStorage.getItem('email');
   const name = localStorage.getItem('name');
-  const apiKey = '837d05f4d0c9787e5980a5a7fe323afd'
+  const apiKey = '837d05f4d0c9787e5980a5a7fe323afd';
+  const user = localStorage.getItem('email');
+
+  const filteredAuthors = authors.filter(author => author.email === user);
 
   
+
 
   const handleImageChange = (event) => {
     setImage(event.target.files[0]);
@@ -48,7 +53,8 @@ const AddPost = () => {
       'title': title,
       'shortDescription': shortDescription,
       'fullDescription': fullDescription,
-      'tag': tag
+      'tag': tag,
+      'author': filteredAuthors[0]?.image
     }
     createPost(data)
 

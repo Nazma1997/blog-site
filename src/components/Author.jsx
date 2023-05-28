@@ -17,7 +17,7 @@ const Author = () => {
        <div className=' mt-5'>
          <div className='flex'>
           {
-            authors?.slice(0,4)?.map(item => <img src={item?.image} key={item._id} className="  text-xl author border-8 border-gray-700 rounded-full -ml-8 	"/>)
+            authors?.slice(5,10)?.map(item => <img src={item?.image} key={item._id} className="  text-xl author border-8 border-gray-700 rounded-full -ml-8 	"/>)
           }
          
          </div>
