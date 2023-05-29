@@ -2,7 +2,7 @@ import React from 'react';
 import logo from '../../images/logo.png';
 import '../../style.css';
 import { Link } from 'react-router-dom';
-import { useGetUserQuery } from '../../redux/apiSlice/userSlice';
+
 
 const Card = ({item}) => {
 
