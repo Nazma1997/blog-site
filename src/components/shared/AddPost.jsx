@@ -23,8 +23,9 @@ const AddPost = () => {
   const user = localStorage.getItem('email');
 
   const filteredAuthors = authors.filter(author => author.email === user);
-
   
+
+// console.log(filteredAuthors[0]?.name)
 
 
   const handleImageChange = (event) => {
@@ -47,14 +48,15 @@ const AddPost = () => {
       const imageUrl = imgbbResponse.data.data.url;
 
     const data = {
-      'name': name,
+      'name': filteredAuthors[0]?.name,
       'image': imageUrl,
       'email': email,
       'title': title,
       'shortDescription': shortDescription,
       'fullDescription': fullDescription,
       'tag': tag,
-      'author': filteredAuthors[0]?.image
+      'author': filteredAuthors[0]?.image,
+      
     }
     createPost(data)
 

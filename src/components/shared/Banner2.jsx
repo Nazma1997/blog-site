@@ -9,10 +9,9 @@ const Banner2 = ({data}) => {
 
   const createdAt = data?.createdAt;
   const dateObj = new Date(createdAt);
-  const user = localStorage.getItem('email');
-  const {data: authors = []} = useGetUserQuery()
+  
 
-  const filteredAuthors = authors.filter(author => author.email === user);
+
 
   const day = dateObj.getDate();
   const month = dateObj.getMonth() + 1; // Months are zero-based, so add 1
@@ -32,7 +31,7 @@ const Banner2 = ({data}) => {
         <h3 className="text-white font-normal text-xl my-8 lg:w-6/12 " dangerouslySetInnerHTML={{__html:data?.shortDescription}}></h3>
      
          <div className='flex'>
-           <img src={filteredAuthors[0]?.image} className="mt-7 rounded-full  author3" />
+           <img src={data?.author} className="mt-7 rounded-full  author3" />
            <div className='mt-8 ml-2'>
            <h3 className="text-white font-normal  ">{data?.name}</h3>
            <h3 className="text-white font-normal  ">{formattedDate} - 5 minutes read</h3>

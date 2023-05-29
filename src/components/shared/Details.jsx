@@ -14,6 +14,8 @@ const Details = () => {
   const { id } = useParams();
   const {data} = useGetSingleItemQuery(id)
 
+  console.log(data)
+
   // console.log('items', data)
 
   
