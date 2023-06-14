@@ -31,7 +31,7 @@ const Author = () => {
    
     <div className="grid lg:grid-cols-4 md:grid-cols-2 gap-4">
          {
-          posts?.slice(4,9).map(item =>
+          posts?.slice(4,8).map(item =>
              <Card  item={item} key={item._id}/>
             )
          }
